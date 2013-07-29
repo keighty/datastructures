@@ -1,0 +1,1 @@
+# This repo contains code snips of interview problem solving attempts.
