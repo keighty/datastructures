@@ -24,11 +24,9 @@ class QuickFind
     def create_union(p, q)
       target = location(p)
       goal = location(q)
-      temp_array = []
-      @find_array.each do |element|
-        temp_array << (element == target ? goal : element)
+      temp_array = @find_array.map do |element|
+        element == target ? goal : element
       end
-      return temp_array
     end
 end
 
