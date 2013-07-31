@@ -15,6 +15,8 @@ end
 
 Benchmark.bm do |x|
   x.report { testUnit(QuickFind.new(@size)) }
-  x.report { testUnit(QuickUnion.new(@size)) }
-  x.report { testUnit(WeightedQuickUnion.new(@size)) }
+  x.report { testUnit(QuickFind.new(@size)) }
+  x.report { testUnit(QuickFind.new(@size)) }
+  # x.report { testUnit(QuickUnion.new(@size)) }
+  # x.report { testUnit(WeightedQuickUnion.new(@size)) }
 end
