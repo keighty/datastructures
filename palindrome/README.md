@@ -1,0 +1,1 @@
+Palindrome without using the ruby reverse method was a code challenge posed during the PCS interview prep day. Here are a couple of solutions.
