@@ -14,10 +14,10 @@ Benchmark
 Hash
 
 ##Approach
-1. [ ] create test files
-1. [ ] load files at initialize
-1. [ ] load files from stdin @ initialize
-1. [ ] process files into a hash: key => age, value => count
+1. [X] create test files
+1. [X] load files at initialize
+1. [X] load files from stdin @ initialize
+1. [X] process files into a hash: key => age, value => count
 1. [ ] output the hash in a string friendly format
 1. [ ] build benchmark and test
 1. [ ] repeat with jruby
