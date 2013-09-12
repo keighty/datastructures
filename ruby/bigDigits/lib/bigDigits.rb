@@ -2,29 +2,39 @@ require_relative 'digit_fixtures'
 
 class BigDigits
   @@digits = [ZERO, ONE]
-  def show(number)
-    digit_array = number.to_s.split("")
-    line_array = Array.new(16) { "" }
-    digit_array.each do |digit|
-      big_digit = @@digits[digit.to_i]
-      big_digit.split("\n").each_with_index do |line, index|
-        line_array[index] += line
-      end
-    end
 
-    line_array.join("\n") + "\n"
+  attr_accessor :line_array
+
+  def initialize
+    @line_array = Array.new(16) { "" }
   end
 
-  def show_map(number)
-    digit_array = number.to_s.split("")
-    line_array = Array.new(16) { "" }
+  def show(number)
+    process_number(number.to_s)
+    process_line_array
+  end
 
-    digit_array.each do |digit|
-      big_digit = @@digits[digit.to_i].split("\n").reverse!
-      line_array = line_array.map do |e|
-        e += big_digit.pop
-      end
+  def process_number(number_string)
+    number_string.each_char do |digit|
+      process_digit(get_big_digit(digit))
     end
+  end
+
+  def get_big_digit(digit)
+    @@digits[digit.to_i]
+  end
+
+  def process_digit(big_digit)
+    big_digit.split("\n").each_with_index do |line, index|
+      process_line(line, index)
+    end
+  end
+
+  def process_line(line, index)
+    line_array[index] += line
+  end
+
+  def process_line_array
     line_array.join("\n") + "\n"
   end
 end
