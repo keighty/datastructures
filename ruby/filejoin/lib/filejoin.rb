@@ -1,5 +1,3 @@
-require 'readline'
-
 class Filejoin
   attr_accessor :age_hash
 
