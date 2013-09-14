@@ -5,7 +5,6 @@ class Filejoin
 
   def initialize
     @age_hash = Hash.new(0)
-    process_input
   end
 
   def process_input

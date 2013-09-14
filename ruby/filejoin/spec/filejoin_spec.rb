@@ -12,6 +12,7 @@ describe Filejoin do
   end
 
   it 'should take commandline args' do
+    %x( ruby filejoin.rb TESTFILE10 )
   end
 
 end
