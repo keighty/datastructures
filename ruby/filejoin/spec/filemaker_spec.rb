@@ -6,14 +6,10 @@ describe Filemaker do
   FILENAME = "./data/testfile.csv"
 
   before do
-    @fm = Filemaker.new(1000, FILENAME)
+    @fm = Filemaker.new(1000)
   end
 
-  after do
-    File.delete(FILENAME)
-  end
-
-  it "should respond to :save_array" do
-    expect(@fm.respond_to?(:save_array)).to be_true
+  it "should respond to :save_file" do
+    expect(@fm.respond_to?(:save_file)).to be_true
   end
 end
