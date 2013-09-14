@@ -1,7 +1,5 @@
 require 'spec_helper'
 
-##This is a good mocking exercise
-
 describe Filemaker do
   FILENAME = "./data/testfile.csv"
 
