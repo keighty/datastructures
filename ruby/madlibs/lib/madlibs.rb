@@ -37,10 +37,14 @@ class MadLibs
     end
 
     def make_story
-      get_madlibs.each do |word|
-        number = phrase.match(/(\d)/)[0]
-        phrase.gsub!(number, words[number.to_i])
+      get_madlibs.length.times do
+        replace_numbers
       end
       puts phrase
+    end
+
+    def replace_numbers
+      number = phrase.match(/(\d)/)[0]
+      phrase.gsub!(number, words[number.to_i])
     end
 end
