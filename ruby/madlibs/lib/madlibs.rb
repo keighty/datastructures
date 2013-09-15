@@ -9,21 +9,29 @@ class MadLibs
 
   def play
     make_story
+    show_story
   end
 
   private
-
-    def word_array
-      game.word_list
+    def make_story
+      get_madlibs
+      insert_words
     end
 
-    def phrase
-      game.phrase
+    def show_story
+      puts phrase
     end
 
     def get_madlibs
       @words = word_array.map do |word|
         get_word(word)
+      end
+    end
+
+    def insert_words
+      word_array.length.times do
+        number = phrase.match(/(\d)/)[0]
+        phrase.gsub!(number, words[number.to_i])
       end
     end
 
@@ -36,15 +44,11 @@ class MadLibs
       gets.chomp
     end
 
-    def make_story
-      get_madlibs.length.times do
-        replace_numbers
-      end
-      puts phrase
+    def word_array
+      game.word_list
     end
 
-    def replace_numbers
-      number = phrase.match(/(\d)/)[0]
-      phrase.gsub!(number, words[number.to_i])
+    def phrase
+      game.phrase
     end
 end
