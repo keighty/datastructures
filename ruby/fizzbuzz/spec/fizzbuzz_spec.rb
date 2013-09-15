@@ -5,15 +5,15 @@ describe Fizzbuzz do
     @fb = Fizzbuzz.new
   end
 
-  it "should check that 3%3 outputs fizz" do
+  it "should check that 3 outputs fizz" do
     expect(@fb.check_mod(3)).to eq "fizz"
   end
 
-  it "should check that 5%5 outputs buzz" do
+  it "should check that 5 outputs buzz" do
     expect(@fb.check_mod(5)).to eq "buzz"
   end
 
-  it "should check that 15%15 outputs fizzbuzz" do
+  it "should check that 15 outputs fizzbuzz" do
     expect(@fb.check_mod(15)).to eq "fizzbuzz"
   end
 
