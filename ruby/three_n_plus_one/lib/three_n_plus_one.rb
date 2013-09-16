@@ -1,23 +1,25 @@
 class ThreeNPlusOne
-  attr_accessor :sequence
+  attr_reader :sequence
 
-  def initialize
+  def initialize(number)
     @sequence = []
-  end
-
-  def make_sequence(number)
-    sequence.push(number)
-
-    return if number == 1
-
-    if number % 2 == 0
-      make_sequence(number/2)
-    else
-      make_sequence(number * 3 + 1)
-    end
+    make_sequence(number)
   end
 
   def sequence_number
     sequence.length
   end
+
+  private
+    def make_sequence(number)
+      sequence.push(number)
+
+      return if number == 1
+
+      if number % 2 == 0
+        make_sequence(number/2)
+      else
+        make_sequence(number * 3 + 1)
+      end
+    end
 end
