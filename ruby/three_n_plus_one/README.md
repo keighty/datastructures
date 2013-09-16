@@ -57,5 +57,5 @@ For each pair of input integers i and j you should output i, j, and the maximum 
 ##Pseudocode
 * [X] determine sequence for a single integer
 * [X] determine sequence number for a single integer
-* [ ] determine maximum sequence number for range of integers
-* [ ] optimize algorithm
+* [X] determine maximum sequence number for range of integers
+* [X] optimize algorithm
