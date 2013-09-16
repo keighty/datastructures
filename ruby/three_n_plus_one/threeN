@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+# 3N + 1 problem
+# usage:
+#   ./threeN <input file>
+#   echo <integer range> | ./threeN
+#
+# on Windows run with: ruby threeN [options]
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'lib'))
+require 'three_n_plus_one'
+require 'three_n_plus_one_max'
+
+ThreeNPlusOneMax.new.process
