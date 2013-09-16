@@ -55,7 +55,7 @@ For each pair of input integers i and j you should output i, j, and the maximum 
 [UVa online judge](http://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=3&page=show_problem&problem=36) programming contest example.
 
 ##Pseudocode
-determine sequence for a single integer
-determine sequence number for a single integer
-determine maximum sequence number for range of integers
-optimize algorithm
+* [X] determine sequence for a single integer
+* [X] determine sequence number for a single integer
+* [ ] determine maximum sequence number for range of integers
+* [ ] optimize algorithm
