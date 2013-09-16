@@ -27,4 +27,5 @@ class Filejoin
 end
 
 f = Filejoin.new
+f.process_input
 p f.sorted_hash
