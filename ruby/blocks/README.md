@@ -59,6 +59,8 @@ quit
  9:
 
 ##Pseudocode
-initialize with integer
-implement move, pile, quit methods
+* [ ] initialize with integer
+* [ ] implement move, pile, quit methods
+* [ ] print output
+* [ ] work in file input
 
