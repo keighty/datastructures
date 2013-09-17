@@ -20,6 +20,8 @@ class Blocks
 
   def arm(args)
     command  = "#{args[0]}_#{args[2]}"
+    quit if command == "quit_"
+
     a        = args[1].to_i
     b        = args[3].to_i
 
@@ -52,19 +54,15 @@ class Blocks
     move_array(a, b)
   end
 
-  def quit_(*args)
-    show_piles
-    abort
+  def quit
+    abort(show_piles)
   end
 
   private
     def process_string(string)
       commands = string.split("\n")
       start(commands.shift.to_i)
-      until commands.empty?
-        arm(commands.shift.split(" "))
-      end
-      puts show_piles
+      arm(commands.shift.split(" ")) until commands.empty?
     end
 
     def reveal(block)
@@ -81,7 +79,6 @@ class Blocks
     end
 
     def move_array(a, b)
-      #split the array at the pile location of a on a
       a_location = piles[locations[a]]
       a_partial = a_location.slice(a_location.index(a)..-1)
 

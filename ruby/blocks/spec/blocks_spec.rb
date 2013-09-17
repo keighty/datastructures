@@ -47,11 +47,7 @@ describe Blocks do
     expect(@bg.show_piles).to eq "0: 0\n1: \n2: 2 1\n3: 3\n4: 4\n"
   end
 
-  it "should quit" do
-    @bg.arm(%w{quit})
+  xit "should quit" do
+    expect(@bg.arm(%w{quit})).to raise SystemExit
   end
-  # xit "should output the Blocks game with no trailing spaces" do
-  #   @bg.game_array = [[], [1, 0, 2], []]
-  #   expect(@bg.show_game).to eq "0:\n1: 1 0 2\n2:\n"
-  # end
 end
