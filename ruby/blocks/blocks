@@ -3,7 +3,8 @@
 # 16-Sep-2013
 #
 # Usage:
+# ./blocks data/input.txt
 #
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'lib'))
 require 'blocks'
-Blocks.new
+Blocks.new.process_input
