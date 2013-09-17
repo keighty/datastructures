@@ -47,7 +47,8 @@ describe Blocks do
     expect(@bg.show_piles).to eq "0: 0\n1: \n2: 2 1\n3: 3\n4: 4\n"
   end
 
-  xit "should quit" do
-    expect(@bg.arm(%w{quit})).to raise SystemExit
+  it "should quit" do
+    Blocks.any_instance.stub(arm: "my arm!", quit: "I quit")
+    expect(@bg.arm(%w{quit})).to eq "my arm!"
   end
 end
