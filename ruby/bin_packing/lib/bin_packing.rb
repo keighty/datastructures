@@ -1,0 +1,2 @@
+class BinPacking
+end

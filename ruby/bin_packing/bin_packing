@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+# bin_packing
+# 17-Sep-2013
+#
+# Usage:
+#
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'lib'))
+require 'bin_packing'
+BinPacking.new
