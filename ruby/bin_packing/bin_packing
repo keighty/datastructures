@@ -6,4 +6,7 @@
 #
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'lib'))
 require 'bin_packing'
-BinPacking.new
+
+b = BinPacking.new
+b.id_contents
+puts b.winner
