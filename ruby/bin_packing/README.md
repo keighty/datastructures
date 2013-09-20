@@ -39,3 +39,9 @@ If more than one order of brown, green, and clear bins yields the minimum number
 BCG 30
 CBG 50
 ```
+
+###Pseudocode
+* [ ] method to handle 9 digit input
+* [ ] output method
+* [ ] method to determine most suitable bin
+* [ ] method to count bottle moves
