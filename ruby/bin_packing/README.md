@@ -41,7 +41,7 @@ CBG 50
 ```
 
 ###Pseudocode
-* [ ] method to handle 9 digit input
-* [ ] output method
-* [ ] method to determine most suitable bin
-* [ ] method to count bottle moves
+* [X] method to handle 9 digit input
+* [X] output method
+* [X] method to determine most suitable bin
+* [X] method to count bottle moves
