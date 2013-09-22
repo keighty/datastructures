@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+# arbitrage
+# 22-Sep-2013
+#
+# Usage:
+#
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'lib'))
+require 'arbitrage'
+Arbitrage.new
