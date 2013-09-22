@@ -49,3 +49,5 @@ If no profiting sequence of n or fewer transactions exists, then the line `no ar
 1 2 4 1
 no arbitrage sequence exists
 ```
+
+###Pseudocode
