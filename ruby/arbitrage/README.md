@@ -5,6 +5,8 @@ The use of computers in the finance industry has been marked with controversy la
 ###The Problem
 Arbitrage is the trading of one currency for another with the hopes of taking advantage of small differences in conversion rates among several currencies in order to achieve a profit. For example, if $1.00 in U.S. currency buys 0.7 British pounds currency, £1 in British currency buys 9.5 French francs, and 1 French franc buys 0.16 in U.S. dollars, then an arbitrage trader can start with $1.00 and earn $1.064 dollars thus earning a profit of 6.4 percent.
 
+1USD * 0.7LB * 9.5FR * 0.16USD = 1.064USD
+
 You will write a program that determines whether a sequence of currency exchanges can yield a profit as described above.
 
 To result in successful arbitrage, a sequence of exchanges must begin and end with the same currency, but any starting currency may be considered.
@@ -51,3 +53,16 @@ no arbitrage sequence exists
 ```
 
 ###Pseudocode
+row major order:
+C =
+[1][2][3]
+[4][5][6]
+
+An array declared in C as
+int A[2][3] = { {1, 2, 3}, {4, 5, 6} };
+
+With the ones included:
+3 // three countries
+1.2 .89 //Country 1$ can purchase 1.2 of Country 2$ which can purchase 0.89 of Country 3$
+.88 5.1
+1.1 0.15

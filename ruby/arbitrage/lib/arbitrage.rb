@@ -14,9 +14,16 @@ class Arbitrage
       line.split(" ").map {|x| x.to_f}
     end
   end
-end
 
-x = Arbitrage.new
-x.process_input
-p x.n
-p x.conversions
+  def profit?(starting_value=1.0)
+    conversions.each do |conversion|
+      end_value = starting_value
+      conversion.each do |convert|
+        end_value *= convert
+      end
+      if end_value > starting_value*1.1
+        p conversion
+      end
+    end
+  end
+end

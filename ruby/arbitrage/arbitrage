@@ -6,4 +6,10 @@
 #
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), 'lib'))
 require 'arbitrage'
-Arbitrage.new
+# Arbitrage.new
+
+x = Arbitrage.new
+x.process_input
+p x.n
+p x.conversions
+p x.profit?
